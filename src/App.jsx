@@ -7,7 +7,7 @@ function App() {
 
   const handleSetCookie = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/set-cookie', { withCredentials: true });
+      const res = await axios.get('https://backend-task-33.onrender.com/set-cookie', { withCredentials: true });
       setResponse(JSON.stringify(res.data));
     } catch (err) {
       setResponse(err.message);
@@ -16,7 +16,7 @@ function App() {
 
   const handleGetCookie = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/get-cookie', { withCredentials: true });
+      const res = await axios.get('https://backend-task-33.onrender.com/get-cookie', { withCredentials: true });
       setResponse(JSON.stringify(res.data));
     } catch (err) {
       setResponse(err.response?.data?.message || err.message);
