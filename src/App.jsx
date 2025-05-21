@@ -14,11 +14,11 @@ function App() {
     try {
       let res;
       if (endpoint === '/api/create') {
-        res = await axios.post('http://localhost:5000/api/create', {
+        res = await axios.post('https://backend-task-33.onrender.com/api/create', {
           sampleData: 'This is some data sent to the server'
         });
       } else {
-        res = await axios.get(`http://localhost:5000${endpoint}`);
+        res = await axios.get(`https://backend-task-33.onrender.com${endpoint}`);
       }
       setResponse({
         status: res.status,
